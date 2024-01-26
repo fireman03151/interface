@@ -72,6 +72,7 @@ export const PageTabs = () => {
       <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
         <Trans>Swap</Trans>
       </MenuItem>
+
       {infoExplorePageEnabled ? (
         <MenuItem href={`/explore/tokens/${chainName.toLowerCase()}`} isActive={pathname.startsWith('/explore')}>
           <Trans>Explore</Trans>
@@ -86,6 +87,9 @@ export const PageTabs = () => {
           <Trans>NFTs</Trans>
         </MenuItem>
       )}
+      <MenuItem href="/airdrop" isActive={pathname.startsWith('/airdrop')}>
+        <Trans>Airdrop</Trans>
+      </MenuItem>
       <Box display={{ sm: 'flex', lg: 'none', xxl: 'flex' }} width="full">
         <MenuItem href="/pools" dataTestId="pool-nav-link" isActive={isPoolActive}>
           <Trans>Pools</Trans>
